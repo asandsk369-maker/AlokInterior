@@ -1,0 +1,36 @@
+ALOK INTERIOR — SETUP GUIDE
+
+CONTACT DETAILS ADDED
+Alok Singh: call/WhatsApp +91 73796 82425
+Website owner WhatsApp: +91 93369 21979
+Alok email: asandsk369@gmail.com
+
+IMPORTANT: The website has a sign-in/sign-up interface, but real email authentication is NOT active until you connect your own Firebase project. This is required for secure account management.
+
+1. FIREBASE EMAIL SIGN-IN
+- Go to https://console.firebase.google.com/ and sign in.
+- Create a project named Alok Interior.
+- Add a Web App (</> icon) and copy the firebaseConfig values.
+- Open script.js and replace the placeholder values in firebaseConfig with your own apiKey, authDomain, projectId and appId.
+- Firebase Console > Authentication > Get started > Sign-in method > enable Email/Password.
+- After deployment, add the website domain in Authentication settings > Authorized domains.
+- Test Create account, Sign in, Sign out and Forgot password.
+
+2. RUN LOCALLY
+This website uses JavaScript modules. Open the folder in VS Code and use a local server such as the Live Server extension. Do not test by double-clicking index.html if the browser blocks modules.
+
+3. FREE PUBLISHING
+- First configure Firebase and test locally.
+- Go to https://app.netlify.com/ and create/sign into an account.
+- Use the current manual deploy/drag-and-drop option to upload the extracted folder contents: index.html, style.css, script.js and the entire assets folder.
+- Add the live domain to Firebase Authentication > Authorized domains.
+- Open the live URL on your phone and test sign-up, sign-in and the enquiry form.
+
+4. HOW WHATSAPP ENQUIRIES WORK
+After signing in, customers fill their name, contact number, work location, type of work and details. The site prepares a message containing those details and gives two links: “Send to Alok” and “Send to website owner”. The customer must press Send in WhatsApp for each recipient. A normal website cannot silently send WhatsApp messages to two numbers using wa.me links. Automatic delivery needs the official WhatsApp Business Platform/API and a secure backend, and may involve charges.
+
+5. CURRENT LIMITATIONS
+- This starter uses Firebase Authentication once configured, but does not yet store enquiries in a database or provide a private admin dashboard.
+- For saving/managing enquiries, add a database such as Firestore with carefully configured security rules or a secure backend.
+- Replace sample gallery tiles/photos with real project photos as available.
+- Keep your Firebase project and hosting accounts under your control. Never share passwords or secret keys.
